@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakub | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Jakub<span class="highlight">Dev</span></h1>
+    <nav>
+      <ul>
+        <li><a href="#webapps">Web Apps</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#opensource">Open Source</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="images/your-photo.jpg" alt="Jakub Photo" class="profile-pic">
+      <div class="hero-text">
+        <h2 class="typing">Hello, I'm Jakub</h2>
+        <p>I’m a <span class="highlight">Game & Web Developer</span> passionate about crafting digital worlds and interactive experiences.</p>
+        <div class="hero-buttons">
+          <a href="#webapps" class="btn">Web Apps</a>
+          <a href="#games" class="btn">Game Projects</a>
+          <a href="#opensource" class="btn">Open Source</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEB APPS -->
+  <section id="webapps" class="fade-in">
+    <h2>Web Applications</h2>
+    <div class="projects">
+      <div class="card">
+        <i class="fas fa-globe project-icon"></i>
+        <h3>Portfolio Website</h3>
+        <p>A sleek responsive portfolio page with animations and dark green theme.</p>
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tzjrgames@gmail.com&item_name=Portfolio%20Website&amount=5&currency_code=EUR">Buy Now - 5€</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-shop project-icon"></i>
+        <h3>E-commerce Platform</h3>
+        <p>Modern online store with secure checkout and smooth UI.</p>
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tzjrgames@gmail.com&item_name=E-commerce%20Platform&amount=15&currency_code=EUR">Buy Now - 15€</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME PROJECTS -->
+  <section id="games" class="fade-in">
+    <h2>Game Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <i class="fas fa-gamepad project-icon"></i>
+        <h3>Multiplayer Survival</h3>
+        <p>A Unity survival game with Photon PUN networking and crafting system.</p>
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tzjrgames@gmail.com&item_name=Multiplayer%20Survival%20Game&amount=20&currency_code=EUR">Buy Now - 20€</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-dragon project-icon"></i>
+        <h3>Fantasy RPG</h3>
+        <p>Story-driven RPG with quests, magic, and unique world design.</p>
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tzjrgames@gmail.com&item_name=Fantasy%20RPG&amount=10&currency_code=EUR">Buy Now - 10€</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE -->
+  <section id="opensource" class="fade-in">
+    <h2>Open Source</h2>
+    <div class="projects">
+      <div class="card">
+        <i class="fas fa-code project-icon"></i>
+        <h3>UI Toolkit</h3>
+        <p>A library of reusable UI components for rapid development.</p>
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tzjrgames@gmail.com&item_name=UI%20Toolkit&amount=20&currency_code=EUR">Buy Now - 20€</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-server project-icon"></i>
+        <h3>Backend Tools</h3>
+        <p>Open source backend utilities for fast API prototyping.</p>
+        <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tzjrgames@gmail.com&item_name=Backend%20Tools&amount=50&currency_code=EUR">Buy Now - 50€</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p class="center-text">Let’s create something together! Reach me at:</p>
+    <p class="center-text"><strong>tzjrgames@gmail.com</strong></p>
+    <div class="socials">
+      <a href="https://github.com/TZJRGAMES" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Jakub | All Rights Reserved.</p>
+  </footer>
+
+  <!-- SCRIPT for animations -->
+  <script>
+    // Typing effect
+    const text = "Hello, I'm Jakub";
+    let i = 0;
+    function typingEffect() {
+      if (i < text.length) {
+        document.querySelector(".typing").innerHTML = text.substring(0, i+1);
+        i++;
+        setTimeout(typingEffect, 120);
+      }
+    }
+    typingEffect();
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+</body>
+</html>
