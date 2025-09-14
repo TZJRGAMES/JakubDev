@@ -1,0 +1,71 @@
+/* Background + Fonts */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #323232; /* Orange background */
+  color: #000;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+/* Currency dropdown */
+.currency-select {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+select {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #222222;
+  color: #ffffff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.coin-button {
+  padding: 12px 24px;
+  border: 2px solid black;
+  background-color: #212121;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 4px; /* Less rounded */
+  box-shadow: 2px 2px 0 #000;
+}
+
+.coin-button:hover {
+  transform: scale(1.03);
+}
+
+/* Chart container */
+.chart-container {
+  max-width: 100%;
+  margin: auto;
+  background-color: #272727;
+  border: 3px solid #242424;
+  border-radius: 4px;
+  padding: 10px;
+}

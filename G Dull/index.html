@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coiny Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>BitMonitor</h1>
+
+    <div class="currency-select">
+      <label for="currency">Currency:</label>
+      <select id="currency" onchange="updateCurrency()">
+        <option value="usd" selected>USD</option>
+        <option value="eur">EUR</option>
+        <option value="gbp">GBP</option>
+      </select>
+    </div>
+
+    <div class="button-container">
+      <button class="coin-button btc" onclick="loadChart('bitcoin')">Bitcoin</button>
+      <button class="coin-button eth" onclick="loadChart('ethereum')">Ethereum</button>
+      <button class="coin-button ada" onclick="loadChart('cardano')">Cardano</button>
+      <button class="coin-button doge" onclick="loadChart('dogecoin')">Dogecoin</button>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="priceChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
